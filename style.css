@@ -1,0 +1,200 @@
+:root {
+  --header-height: 7vh;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+
+}
+html{
+  scrollbar-face-color: #121212;
+  scrollbar-base-color: #121212;
+  scrollbar-3dlight-color: #121212;
+  scrollbar-highlight-color: #121212;
+  scrollbar-track-color: #121212;
+  scrollbar-arrow-color: #121212;
+  scrollbar-shadow-color: #121212;
+  /* scrollbar-dark-shadow-color: #121212; */
+}
+
+::-webkit-scrollbar { width: 5px; height: 10px;}
+::-webkit-scrollbar-button {  background-color: #121212; }
+::-webkit-scrollbar-track {  background-color: #121212;}
+::-webkit-scrollbar-track-piece { background-color: #121212;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #9e9e9e; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #121212;}
+::-webkit-resizer { background-color: #9e9e9e;}
+
+
+.nvbr{
+  height: default;
+}
+
+#sidebar {
+  display: none;
+  width: 20%;
+  height: 93vh;
+  max-width: 100%;
+  float: left;
+  overflow-y:scroll;
+}
+
+.mapContainer {
+  margin-top: 7vh;
+  /* set height based on actual viewport size, --vh js variable saved in root*/
+  height: calc(var(--vh, 1vh) * 100 - var(--header-height, 7vh));
+}
+/* container needs set size to use % */
+#mapid {
+  height: 100%;
+  border-radius: 5px;
+}
+
+#mobileSdbr{
+  display: none;
+}
+
+@media (min-width: 767px){
+  .nvbr{
+    height: 7vh !important;
+  }
+  #sidebar{
+    display: block;
+  }
+}
+
+@media (max-width: 767px){
+  #logo{
+    width: 120px;
+  }
+  #mobileSdbr{
+    display: block;
+    padding: 10px;
+  }
+  #sidebar {
+    display: none;
+    width: 100%;
+    height: 93vh;
+    max-width: 100%;
+    float: left;
+    overflow-y:scroll;
+    padding-top: 30px;
+  }
+  .mapContainer {
+    padding-top: 10px;
+    margin-top: 7vh;
+    height: calc(var(--vh, 1vh) * 100 - var(--header-height, 7vh));
+  }
+  /* remove side padding */
+  .abtContainer, .glosContainer, .eqContainer {
+    padding:0 !important;
+  }
+  .nav-item{
+    padding: 10px;
+  }
+
+  #navGlos, #navAbt{
+    display: none;
+  }
+
+
+}
+
+#mapEq { min-height: 180px; }
+#mapLocation { min-height: 300px; }
+#mapHistory { min-height: 300px; }
+#mapSeismicity { min-height: 300px; }
+
+/* sidebar items */
+.item:hover{
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: rgb(206, 206, 206);
+}
+
+.item:last-child {
+  margin-bottom: 40%;
+}
+.activeItem{
+  opacity: 0.7 !important;
+}
+
+
+
+.eqGreat{
+  background-color: #ff2600;
+}
+.eqMajor{
+  background-color: #C80000;
+}
+.eqStrong{
+  background-color: #800000;
+}
+.eqModerate{
+  background-color: #FF9100;
+}
+.eqLight{
+  background-color: #1b8700f1;
+}
+.eqMinor{
+  background-color: #03afff;
+}
+.eqMicro{
+  background-color: #A2A2A2;
+}
+
+
+
+.legend {
+  font-size: 1.2em;
+  line-height: 18px;
+  color: #555;
+  background-color: white;
+}
+
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+
+.darkItem{
+  color: white;
+  background-color: #2e2e2e;
+}
+
+.darkItem2{
+  background-color: #4d4d4d;
+  color: white;
+}
+
+
+.darkBackground{
+  background-color: #121212;
+}
+
+.darkBackground2{
+  background-color: #424242;
+}
+.lightText{
+  color: white;
+}
+
+.nav-pills li button{
+  color: white !important;
+  }
+
+nav .navbar-nav li a{
+  color: white !important;
+  }
+
+tr, td, table{
+  color: white !important;
+}
+
